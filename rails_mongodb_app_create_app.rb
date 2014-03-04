@@ -7,7 +7,7 @@ s.add_dependency 'mongoid'
 s.add_dependency 'bson_ext'
 s.add_dependency 'mongo_ext'
 
-# add to 'Gemfile'
+ OR # add to 'Gemfile'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'mongo_ext'
@@ -19,7 +19,7 @@ end
 
 ######## create moggodb yml file 
 
-$ cd spec/dummy 
+$ cd test/dummy 
 $ rails g mongoid:config
 
 #######Then  change the rails file under script/rails folder as it's having:
@@ -32,3 +32,9 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "rails/test_unit/railtie"
+
+add test/dumy/config/application.rb
+
+require 'rack/mongoid' # TADA!
+require "mongoid/railtie"
+
