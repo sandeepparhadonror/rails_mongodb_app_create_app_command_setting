@@ -37,4 +37,12 @@ add test/dumy/config/application.rb
 
 require 'rack/mongoid' # TADA!
 require "mongoid/railtie"
+##########################################################################
+
+if mongoid error than
+
+sudo rm /var/lib/mongodb/mongod.lock
+mongod --repair
+sudo service mongodb start
+
 
